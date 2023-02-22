@@ -1,0 +1,36 @@
+   img{
+    object-fit: cover;
+    border-radius: 20px;
+    width: 200px;
+   }
+
+   li{
+    float: left;
+   }
+   
+   .card {
+    margin-left: 45px;
+    margin-top: 50px;
+    width: fit-content;
+    height: fit-content;
+    background-image: linear-gradient(163deg, #eaff00 0%, #ff9100 100%);
+    border-radius: 20px;
+    transition: all .3s;
+   }
+   
+   .card2 {
+    width: fit-content;
+    height: fit-content;
+    background-color: #07142A;
+    border-radius:20px;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }

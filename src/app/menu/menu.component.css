@@ -1,0 +1,99 @@
+
+.techo{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.nombre-empresa{
+    margin-left: 22px;
+    font-size: 22px;
+}
+.menu{
+    margin-right: 200px;
+    font-size: 15px;
+}
+*{
+    color: white;
+}
+*:focus,*:hover{
+    color: orange;
+}
+
+img{
+    width: 70px;
+    margin-left: 10px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+li{
+    margin-left: 40px;
+}
+.registro{
+    margin-left: 10px;
+}
+.pelis{
+    margin-left: 30px;
+}
+
+.buscador{
+    padding-top: 6px;
+}
+
+
+
+.containerInput {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 4px 0;
+    z-index: 1;
+    font-size: 15px;
+  }
+  
+  .containerInput::before {
+    content: '';
+    width: 110%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset: 0 0 0 0;
+    margin: auto;
+    animation: rotate6234 2.5s ease-in-out infinite;
+    z-index: -1;
+    background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, rgb(255, 132, 0) 25%, #073AFF00 25%);
+  }
+  
+  .containerInput > input {
+    width: 170px;
+    height: 0px;
+    font-size: inherit;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    background-color: #07142A;
+    outline: 5px solid #3782A3;
+  }
+  
+  .containerInput > input:focus {
+    outline: none;
+  }
+  
+  .containerInput > input:not(:placeholder-shown) {
+    outline: none;
+  }
+  
+  .containerInput > input:not(:placeholder-shown):valid {
+    outline: 4px solid rgb(0, 255, 183);
+    border-radius: 0;
+  }
+  
+  @keyframes rotate6234 {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
