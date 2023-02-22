@@ -4,11 +4,9 @@
     width: 200px;
    }
 
-   li{
-    float: left;
-   }
    
    .card {
+   float: left;
     margin-left: 45px;
     margin-top: 50px;
     width: fit-content;

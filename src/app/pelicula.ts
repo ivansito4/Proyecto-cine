@@ -4,5 +4,5 @@ export interface Pelicula{
     poster:String;
     tipo:String;
     duracion:String;
-    fehca_estreno:Date;
+    //fecha_estreno:Date;
 }
