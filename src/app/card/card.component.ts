@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Pelicula } from '../pelicula';
+import { Pelicula } from '../clases/pelicula';
+import { LISTAPELICULAS } from '../pelicula-prueba';
+import { PeliculaService } from '../services/pelicula.service';
 
 @Component({
   selector: 'app-card',
@@ -7,12 +9,23 @@ import { Pelicula } from '../pelicula';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  pelicula:Pelicula={
-    id:1,
-    nombre:'Gato con botas',
-    poster:'https://www.lahiguera.net/cinemania/pelicula/10179/el_gato_con_botas_el_ultimo_deseo-cartel-10596.jpg',
-    tipo:'Accion',
-    duracion:'90m',
-    //fecha_estreno:??
+  //peliculas:Pelicula[];
+  peliculas=LISTAPELICULAS;
+
+  constructor(private peliculaServicio:PeliculaService){
+    //this.peliculas=[];
   }
+
+  /*ngOninit(){
+    this.getPeliculas();
+  }
+
+  async getPeliculas(){
+    this.peliculas=await this.peliculaServicio.getPeliculas();
+  }*/
+
+  peliculaClickada(pelicula: Pelicula): void {
+    alert(pelicula.nombre);
+  }
+
 }

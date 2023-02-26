@@ -1,6 +1,10 @@
-<div class="card">
-    <div class="card2">
-        <img
-            src={{pelicula.poster}} />
-    </div>
-</div>
+<app-carousel></app-carousel>
+<ul class="contenedor">
+    <li *ngFor="let pelicula of peliculas" class="card"
+        style="background-image: url({{pelicula.poster}}); background-size: cover; background-repeat: no-repeat;"  (click)="peliculaClickada(pelicula)">
+        <div class="textBox">
+            <p class="text head">{{pelicula.nombre}}</p>
+            <p class="text price">Duración: {{pelicula.duracion}}</p>
+        </div>
+    </li>
+</ul>
