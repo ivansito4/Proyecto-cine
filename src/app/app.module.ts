@@ -14,6 +14,8 @@ import { AmcPeliculaComponent } from './amc-pelicula/amc-pelicula.component';
 import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
 
 import { PeliculaService } from './services/pelicula.service';
+import { FooterComponent } from './footer/footer.component';
+import { CaminoMigasComponent } from './camino-migas/camino-migas.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { PeliculaService } from './services/pelicula.service';
     AppComponent,
     CardComponent,
     AmcPeliculaComponent,
-    PeliculaDetalleComponent
+    PeliculaDetalleComponent,
+    FooterComponent,
+    CaminoMigasComponent
     
   ],
   imports: [

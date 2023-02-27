@@ -43,7 +43,7 @@ li{
 
 
 .containerInput {
-    background-color: #000;
+    background-color: #07142A;
     position: relative;
     overflow: hidden;
     margin: 0;
@@ -51,18 +51,7 @@ li{
     z-index: 1;
     font-size: 15px;
   }
-  
-  .containerInput::before {
-    content: '';
-    width: 110%;
-    aspect-ratio: 1;
-    position: absolute;
-    inset: 0 0 0 0;
-    margin: auto;
-    animation: rotate6234 2.5s ease-in-out infinite;
-    z-index: -1;
-    background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, rgb(255, 132, 0) 25%, #073AFF00 25%);
-  }
+ 
   
   .containerInput > input {
     width: 170px;

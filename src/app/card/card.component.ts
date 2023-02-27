@@ -25,7 +25,7 @@ export class CardComponent {
   }*/
 
   peliculaClickada(pelicula: Pelicula): void {
-    alert(pelicula.nombre);
+    location.href="/detalles";
   }
 
 }

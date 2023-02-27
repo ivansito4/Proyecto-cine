@@ -1,0 +1,7 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="principal">Principal</a></li>
+    <li *ngIf="titulo !== 'Principal'" class="breadcrumb-item active" aria-current="page">{{titulo}}</li>
+    <li *ngIf="titulo == 'Principal'" class="breadcrumb-item active" aria-current="page"></li>
+  </ol>
+</nav>

@@ -5,8 +5,9 @@ import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.co
 
 
 const routes: Routes = [
-  {path:'',component:CardComponent},
-  {path:'detalles',component:PeliculaDetalleComponent}
+  {path:'',redirectTo:'principal',pathMatch:'full'},
+  {path:'principal',component:CardComponent,data:{titulo:'Principal'}},  //para el camino de migas
+  {path:'detalles',component:PeliculaDetalleComponent,data:{titulo:'Detalles'}}
 ];
 
 @NgModule({
