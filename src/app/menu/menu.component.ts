@@ -17,4 +17,10 @@ export class MenuComponent {
 	// appear initially when the page loads on a small screen!
 	isMenuCollapsed = true;
   collapsed = true;
+  complementos(){
+	location.href="/Complementos";
+  }
+  contacto(){
+	location.href="/Contacto";
+  }
 }

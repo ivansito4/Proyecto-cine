@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Pelicula } from '../clases/pelicula';
 import { LISTAPELICULAS } from '../pelicula-prueba';
-import { lastValueFrom } from 'rxjs';
+import { lastValueFrom, of } from 'rxjs';
 
 
 @Injectable({
@@ -10,13 +10,12 @@ import { lastValueFrom } from 'rxjs';
 })
 
 export class PeliculaService {
-  private apiRestUrl = 'http://localhost/proyecto-cine-servidor/public/api/pelicula/'
+  private apiRestUrl = 'http://localhost:80/proyecto-cine-servidor/public/api/pelicula'
   private httpOptions = {
-      headers: new HttpHeaders({'Content-Type':'aplicacion/json'})
+      headers: new HttpHeaders({'Content-Type':'application/json'})
   }
   constructor(private http: HttpClient) { }
   async getPeliculas():Promise<Pelicula[]>{
-    let data:Pelicula;
     try{
       const data= await lastValueFrom(this.http.get<Pelicula[]>(this.apiRestUrl));
       return data;
@@ -24,4 +23,10 @@ export class PeliculaService {
       return [];
     }
   }
+/*
+  async getPelicula():Promise<Pelicula>{
+    const pelicula= LISTAPELICULAS.find(pelicula =>pelicula)
+    return of(pelicula);
+  }
+  */
 }

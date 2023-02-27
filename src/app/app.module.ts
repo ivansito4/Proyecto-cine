@@ -16,6 +16,9 @@ import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.co
 import { PeliculaService } from './services/pelicula.service';
 import { FooterComponent } from './footer/footer.component';
 import { CaminoMigasComponent } from './camino-migas/camino-migas.component';
+import { SesionesComponent } from './sesiones/sesiones.component';
+import { ComplementosComponent } from './complementos/complementos.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { CaminoMigasComponent } from './camino-migas/camino-migas.component';
     AmcPeliculaComponent,
     PeliculaDetalleComponent,
     FooterComponent,
-    CaminoMigasComponent
+    CaminoMigasComponent,
+    SesionesComponent,
+    ComplementosComponent,
+    ContactoComponent
     
   ],
   imports: [

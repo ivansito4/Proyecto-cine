@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import {map,filter } from 'rxjs/operators';
+import { map,filter, last } from 'rxjs/operators';
 
 @Component({
   selector: 'app-camino-migas',
@@ -9,19 +9,18 @@ import {map,filter } from 'rxjs/operators';
   styleUrls: ['./camino-migas.component.css']
 })
 export class CaminoMigasComponent implements OnDestroy{
-  public titulo?:string;
+  public titulos?:string[];
   public tituloSubs$?:Subscription;
 
   constructor(private router:Router){
     this.tituloSubs$ = this.getArgumentos().subscribe(({titulo})=>{
-      this.titulo = titulo;
-      document.title=` Cinetix - ${titulo}`;
+      this.titulos = titulo.split("/");
+      document.title=` Cinetix - ${this.titulos?.at(this.titulos.length-1)}`;
     })
   }
   ngOnDestroy(): void {
     this.tituloSubs$?.unsubscribe();
   }
-
 
   getArgumentos(){
 
@@ -32,4 +31,5 @@ export class CaminoMigasComponent implements OnDestroy{
 
     );
   }
+  
 }

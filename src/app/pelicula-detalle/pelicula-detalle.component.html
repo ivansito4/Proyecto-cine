@@ -1,4 +1,39 @@
-<div style="color: #ffffff;">
-    <p>NOMBRE: {{pelicula.nombre}}</p>
+<div *ngIf="pelicula" class="datos">
+    <table>
+        <tr>
+            <td rowspan="5"><img src="{{pelicula.poster}}"></td>
+            <td><p>Nombre:</p>
+                <p class="parrafosDatos">{{pelicula.nombre}}</p></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Géneros: </p>
+                <p class="parrafosDatos">{{pelicula.tipo}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Duración: </p>
+        <p class="parrafosDatos">{{pelicula.duracion}}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Fecha de estreno: </p>
+                <p class="parrafosDatos">17/10/2022</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="wrapper">
+                    <button (click)="buscarSalas(pelicula.id)"> Comprar entradas
+                    </button>
+                  </div>
+            </td>
+        </tr>
+
+    </table>
 </div>
   
