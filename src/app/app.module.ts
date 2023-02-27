@@ -19,6 +19,8 @@ import { CaminoMigasComponent } from './camino-migas/camino-migas.component';
 import { SesionesComponent } from './sesiones/sesiones.component';
 import { ComplementosComponent } from './complementos/complementos.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { RegistroComponent } from './registro/registro.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ContactoComponent } from './contacto/contacto.component';
     CaminoMigasComponent,
     SesionesComponent,
     ComplementosComponent,
-    ContactoComponent
+    ContactoComponent,
+    RegistroComponent,
+    LoginComponent
     
   ],
   imports: [

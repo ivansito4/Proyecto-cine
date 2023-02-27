@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LISTACOMIDA } from '../pelicula-prueba';
+import { Comida } from '../clases/comida';
 
 @Component({
   selector: 'app-complementos',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./complementos.component.css']
 })
 export class ComplementosComponent {
+  comidas:Comida[]=LISTACOMIDA;
+  constructor(){ }
 
+  
 }

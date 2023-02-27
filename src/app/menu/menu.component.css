@@ -61,7 +61,7 @@ li{
     border: none;
     padding: 12px;
     background-color: #07142A;
-    outline: 5px solid #3782A3;
+    outline: 5px solid orange;
   }
   
   .containerInput > input:focus {

@@ -1,7 +1,7 @@
 import { Pelicula } from './clases/pelicula';
+import { Comida } from './clases/comida';
 const date: Date = new Date();
 export const LISTAPELICULAS: Pelicula[] = [
-  
   {
     id: 1,
     nombre: 'El gato con botas',
@@ -87,4 +87,36 @@ export const LISTAPELICULAS: Pelicula[] = [
     duracion: '54m',
     fecha_estreno:date
   },
+];
+
+export const LISTACOMIDA:Comida[]=[
+ {
+    id:1,
+    nombre:"Perrito caliente",
+    precio:23.59,
+    foto:"https://img.itinari.com/pages/images/original/2979ad08-faa1-4b1f-903b-3eca9b53483b-istock-808693170.jpg?ch=DPR&dpr=2.625&w=1200&h=800&s=66a2eaaa864438df2199a03039d5d2cb"
+ },
+ {
+    id:2,
+    nombre:"Perrito caliente",
+    precio:23.59,
+    foto:"https://img.itinari.com/pages/images/original/2979ad08-faa1-4b1f-903b-3eca9b53483b-istock-808693170.jpg?ch=DPR&dpr=2.625&w=1200&h=800&s=66a2eaaa864438df2199a03039d5d2cb"
+ },
+ {
+  id:1,
+  nombre:"Perrito caliente",
+  precio:23.59,
+  foto:"https://img.itinari.com/pages/images/original/2979ad08-faa1-4b1f-903b-3eca9b53483b-istock-808693170.jpg?ch=DPR&dpr=2.625&w=1200&h=800&s=66a2eaaa864438df2199a03039d5d2cb"
+},
+{
+  id:2,
+  nombre:"Perrito caliente",
+  precio:23.59,
+  foto:"https://img.itinari.com/pages/images/original/2979ad08-faa1-4b1f-903b-3eca9b53483b-istock-808693170.jpg?ch=DPR&dpr=2.625&w=1200&h=800&s=66a2eaaa864438df2199a03039d5d2cb"
+},{
+  id:1,
+  nombre:"Perrito caliente",
+  precio:23.59,
+  foto:"https://img.itinari.com/pages/images/original/2979ad08-faa1-4b1f-903b-3eca9b53483b-istock-808693170.jpg?ch=DPR&dpr=2.625&w=1200&h=800&s=66a2eaaa864438df2199a03039d5d2cb"
+}
 ];
