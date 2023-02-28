@@ -1,23 +1,36 @@
 import { Component,OnInit } from '@angular/core';
 import { Pelicula } from '../clases/pelicula';
 import { LISTAPELICULAS } from '../pelicula-prueba';
-import { ActivatedRoute, UrlTree } from '@angular/router';
+import { GestionCineService } from '../services/gestionCine.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pelicula-detalle',
   templateUrl: './pelicula-detalle.component.html',
   styleUrls: ['./pelicula-detalle.component.css']
 })
-export class PeliculaDetalleComponent /*implements OnInit*/{
-  pelicula:Pelicula=LISTAPELICULAS[0];
-  /*constructor(private route:ActivatedRoute,){}
+export class PeliculaDetalleComponent implements OnInit{
+  date: Date = new Date();    //preguntar al profe 
+  pelicula:Pelicula={
+    id:0,
+    nombre:"",
+    poster:"",
+    tipo:"",
+    duracion:"",
+    fecha_estreno:this.date
+  };
+  constructor(private route: ActivatedRoute,private cineServicio:GestionCineService){}
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.pelicula = LISTAPELICULAS[+params.get('peliculaId')];
-    });
-  }*/
-  //pelicula clickada?
-  buscarSalas(id:Number):void {
-    location.href="Sesiones/"+id;
+    this.obtenerSesiones();
   }
+
+  async obtenerSesiones(){
+    const id = Number(this.route.snapshot.paramMap.get('idPelicula'));
+    this.pelicula= await this.cineServicio.getPelicula(id);
+  }
+
+
+
+  //pelicula clickada?
+  
 }

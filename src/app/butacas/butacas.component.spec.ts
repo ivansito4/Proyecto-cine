@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AmcPeliculaComponent } from './amc-pelicula.component';
+import { ButacasComponent } from './butacas.component';
 
-describe('AmcPeliculaComponent', () => {
-  let component: AmcPeliculaComponent;
-  let fixture: ComponentFixture<AmcPeliculaComponent>;
+describe('ButacasComponent', () => {
+  let component: ButacasComponent;
+  let fixture: ComponentFixture<ButacasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AmcPeliculaComponent ]
+      declarations: [ ButacasComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AmcPeliculaComponent);
+    fixture = TestBed.createComponent(ButacasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

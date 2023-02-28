@@ -2,14 +2,14 @@
  
     <form>
       <div class="user-box">
-        <input type="text" name="" required="">
+        <input type="text" [(ngModel)]="email" name="email" >
         <label>Correo</label>
       </div>
       <div class="user-box">
-        <input type="password" name="" required="">
+        <input type="password" [(ngModel)]="password" name="pasword" >
         <label>Contraseña</label>
       </div>
-      <a href="#">
+      <a (click)="formulario()">
              Iniciar Sesión
          <span></span>
       </a>

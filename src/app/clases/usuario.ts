@@ -6,7 +6,7 @@ export interface Usuario{
     nombre:String;
     apellidos:String;
     login:String;
-    telefono:String;
+    telefono:Number;
     dni:String;
     foto:String;
 }

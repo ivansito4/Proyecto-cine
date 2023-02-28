@@ -10,7 +10,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
-import { AmcPeliculaComponent } from './amc-pelicula/amc-pelicula.component';
 import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
 
 import { GestionCineService } from './services/gestionCine.service';
@@ -21,13 +20,15 @@ import { ComplementosComponent } from './complementos/complementos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { OrderByPipe } from './pipes/order-by.pipe';
+import { ButacasComponent } from './butacas/butacas.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    AmcPeliculaComponent,
     PeliculaDetalleComponent,
     FooterComponent,
     CaminoMigasComponent,
@@ -35,7 +36,10 @@ import { LoginComponent } from './login/login.component';
     ComplementosComponent,
     ContactoComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    FilterPipe,
+    OrderByPipe,
+    ButacasComponent
     
   ],
   imports: [

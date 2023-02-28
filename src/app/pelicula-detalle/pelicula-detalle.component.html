@@ -1,7 +1,7 @@
 <div *ngIf="pelicula" class="datos">
     <table>
         <tr>
-            <td rowspan="5"><img src="{{pelicula.poster}}"></td>
+            <td rowspan="5"><img src="http://localhost/proyecto-cine/public/img/{{pelicula.poster}}"></td>
             <td><p>Nombre:</p>
                 <p class="parrafosDatos">{{pelicula.nombre}}</p></td>
         </tr>
@@ -21,14 +21,14 @@
         <tr>
             <td>
                 <p>Fecha de estreno: </p>
-                <p class="parrafosDatos">17/10/2022</p>
+                <p class="parrafosDatos">{{pelicula.fecha_estreno |date}}</p>
             </td>
         </tr>
 
         <tr>
             <td>
                 <div class="wrapper">
-                    <button (click)="buscarSalas(pelicula.id)"> Comprar entradas
+                    <button [routerLink]="['/Sesiones',pelicula.id]"> Comprar entradas  
                     </button>
                   </div>
             </td>

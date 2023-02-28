@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-menu',
@@ -17,4 +18,5 @@ export class MenuComponent {
 	// appear initially when the page loads on a small screen!
 	isMenuCollapsed = true;
   collapsed = true;
+  filterPelicula="";
 }

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  email:string="";
+  password:string="";
+
+  constructor(){}
+
+  formulario(){
+    const usuario = {
+      email: this.email,
+      password: this.password
+    }
+    alert(this.email+" "+this.password);
+  }
 }

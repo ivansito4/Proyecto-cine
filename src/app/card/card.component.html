@@ -1,6 +1,15 @@
 <app-carousel></app-carousel>
 <ul class="contenedor">
-    <li *ngFor="let pelicula of peliculas" class="card"
+    <div class="buscadores">
+    <input type="text" class="form-control" placeholder="Buscar una película" name="filterPost" [(ngModel)]="filterPelicula">
+    <select  [(ngModel)]="order" >
+        <option selected="selected" value="" disabled="disabled">Ordenar por...</option>
+        <option value="id">id</option>
+        <option value="nombre">nombre</option>
+        <option value="tipo">tipo</option>
+      </select>
+    </div>
+    <li *ngFor="let pelicula of peliculas |filter:filterPelicula | orderBy : order " class="card"
         style="background-image: url(http://localhost/proyecto-cine/public/img/{{pelicula.poster}}); background-size: cover; background-repeat: no-repeat;" [routerLink]="['Detalles',pelicula.id]" >
         <div class="textBox">
             <p class="text head">{{pelicula.nombre}}</p>

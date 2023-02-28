@@ -29,60 +29,8 @@ img{
 li{
     margin-left: 40px;
 }
-.registro{
-    margin-left: 10px;
-}
-.pelis{
-    margin-left: 30px;
-}
-
-.buscador{
-    padding-top: 6px;
-}
 
 
 
-.containerInput {
-    background-color: #07142A;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0 0 4px 0;
-    z-index: 1;
-    font-size: 15px;
-  }
- 
-  
-  .containerInput > input {
-    width: 170px;
-    height: 0px;
-    font-size: inherit;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    background-color: #07142A;
-    outline: 5px solid orange;
-  }
-  
-  .containerInput > input:focus {
-    outline: none;
-  }
-  
-  .containerInput > input:not(:placeholder-shown) {
-    outline: none;
-  }
-  
-  .containerInput > input:not(:placeholder-shown):valid {
-    outline: 4px solid rgb(0, 255, 183);
-    border-radius: 0;
-  }
-  
-  @keyframes rotate6234 {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
+
+

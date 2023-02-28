@@ -3,6 +3,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Pelicula } from '../clases/pelicula';
 import { lastValueFrom, of ,Observable} from 'rxjs';
 import { Comida } from '../clases/comida';
+import { Sesion } from '../clases/sesion';
 
 
 @Injectable({
@@ -26,11 +27,21 @@ export class GestionCineService {
     }
   }
 
-  /*
-  async getPelicula():Promise<Pelicula>{
-    const pelicula= LISTAPELICULAS.find(pelicula =>pelicula)
-    return of(pelicula);
-  }*/
+  
+  async getPelicula(id:number):Promise<Pelicula>{
+    const pelicula= await lastValueFrom(this.http.get<Pelicula>(this.apiRestUrl + "/pelicula/"+id));
+    return pelicula;
+  }
+
+  async getSesiones(id:number):Promise<Sesion[]>{
+    try{
+      const data= await lastValueFrom(this.http.get<Sesion[]>(this.apiRestUrl + "/sesion"));
+      return data;
+    }catch{
+      alert("No se encuentra la sesión");
+      return [];
+    }
+  }
   
   async getComidas():Promise<Comida[]>{
     try{
