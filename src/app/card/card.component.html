@@ -1,7 +1,7 @@
 <app-carousel></app-carousel>
 <ul class="contenedor">
     <li *ngFor="let pelicula of peliculas" class="card"
-        style="background-image: url({{pelicula.poster}}); background-size: cover; background-repeat: no-repeat;" [routerLink]="['Detalles',pelicula.id]" >
+        style="background-image: url(http://localhost/proyecto-cine/public/img/{{pelicula.poster}}); background-size: cover; background-repeat: no-repeat;" [routerLink]="['Detalles',pelicula.id]" >
         <div class="textBox">
             <p class="text head">{{pelicula.nombre}}</p>
             <p class="text price">Duración: {{pelicula.duracion}}</p>

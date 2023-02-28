@@ -13,7 +13,7 @@ import { CardComponent } from './card/card.component';
 import { AmcPeliculaComponent } from './amc-pelicula/amc-pelicula.component';
 import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
 
-import { PeliculaService } from './services/pelicula.service';
+import { GestionCineService } from './services/gestionCine.service';
 import { FooterComponent } from './footer/footer.component';
 import { CaminoMigasComponent } from './camino-migas/camino-migas.component';
 import { SesionesComponent } from './sesiones/sesiones.component';
@@ -48,7 +48,7 @@ import { LoginComponent } from './login/login.component';
     NgbModule,
     NgbDropdownModule
   ],
-  providers: [PeliculaService],
+  providers: [GestionCineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 import { Component,OnInit} from '@angular/core';
 import { Pelicula } from '../clases/pelicula';
 import { LISTAPELICULAS } from '../pelicula-prueba';
-import { PeliculaService } from '../services/pelicula.service';
+import { GestionCineService } from '../services/gestionCine.service';
 
 
 @Component({
@@ -10,15 +10,15 @@ import { PeliculaService } from '../services/pelicula.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  peliculas:Pelicula[]=LISTAPELICULAS;
+  peliculas:Pelicula[]=[];
 
-  constructor(private peliculaServicio:PeliculaService){ }
+  constructor(private peliculaServicio:GestionCineService){ }
 
-  ngOninit(){
-    this.getPeliculas();
+  ngOnInit(){
+    this.obtenerPeliculas();
   }
 
-  async getPeliculas(){
+  async obtenerPeliculas(){
     this.peliculas=await this.peliculaServicio.getPeliculas();
   }
 

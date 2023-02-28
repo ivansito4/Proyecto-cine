@@ -1,6 +1,6 @@
 <div class="contenedor">
   <div *ngFor="let comida of comidas" class="card">
-      <div class="image" style="background-image: url({{comida.foto}});background-size: contain; background-repeat: no-repeat;"><span class="text"></span></div>
+      <div class="image" style="background-image: url(http://localhost/proyecto-cine/public/img/{{comida.foto}});background-size: contain; background-repeat: no-repeat;"><span class="text"></span></div>
         <h2 class="title">{{comida.nombre}}</h2>
         <span class="price">{{comida.precio}} €</span>
   </div>
