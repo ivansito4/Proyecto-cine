@@ -1,0 +1,16 @@
+.contenedor{
+    color: white;
+    margin-left: 30.6%;
+    width: 38%;
+    position: absolute;
+    top: 250px;
+    border: rgb(247, 241, 241) 1px solid;
+}
+
+img{
+    position: absolute;
+    top:-405%;
+    left: -37%;
+    z-index: -11;
+    width: 180%;
+}

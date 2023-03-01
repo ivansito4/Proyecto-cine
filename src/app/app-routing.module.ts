@@ -8,6 +8,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ButacasComponent } from './butacas/butacas.component';
+import { EntradaComponent } from './entrada/entrada.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'Inicio',pathMatch:'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'Contacto',component:ContactoComponent,data:{titulo:'Contacto'}},
   {path:'Login',component:LoginComponent,data:{titulo:'Login'}},
   {path:'Sesiones/:idPelicula/Butacas/:idSesion',component:ButacasComponent,data:{titulo:'Inicio/Detalles Pelicula/Sesiones/Selecionar butaca'}},
+  {path:'Sesiones/:idPelicula/Butacas/:idSesion/Entrada/:idButaca',component:EntradaComponent,data:{titulo:'Inicio/Detalles Pelicula/Sesiones/Butacas/Entrada'}},
   {path:'Registro',component:RegistroComponent,data:{titulo:'Registro'}},
   {path:'Inicio/Detalles/:idPelicula',component:PeliculaDetalleComponent,data:{titulo:'Inicio/Detalles Pelicula'}},
   {path:'Sesiones/:idPelicula',component:SesionesComponent,data:{titulo:'Inicio/Detalles Pelicula/Sesiones'}},

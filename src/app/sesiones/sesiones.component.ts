@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Sesion } from '../clases/sesion';
 import { Pelicula } from '../clases/pelicula';
 import { GestionCineService } from '../services/gestionCine.service';
+import { empty, isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-sesiones',
@@ -11,7 +12,6 @@ import { GestionCineService } from '../services/gestionCine.service';
 })
 export class SesionesComponent {
   sesiones:Sesion[]=[];
-  vacio:Sesion[]=[];
   pelicula:Pelicula={
     id:0,
     nombre:"",
@@ -27,7 +27,6 @@ export class SesionesComponent {
   ngOnInit(){
     this.obtenerPelicula();
     this.obtenerSesiones();
-    
   }
 
   async obtenerPelicula(){
@@ -38,8 +37,12 @@ export class SesionesComponent {
   async obtenerSesiones(){
     const id = Number(this.route.snapshot.paramMap.get('idPelicula'));
     this.sesiones=await this.cineServicio.getSesiones(id);
-    if(this.sesiones==this.vacio){
+    this.sesiones.forEach(sesion => {
+        console.log(JSON.stringify(sesion.sala));
+    });
+    if(this.sesiones.length==0){
       alert("No hay sesiones para esta película");
+      history.back();
     }
   }
 }

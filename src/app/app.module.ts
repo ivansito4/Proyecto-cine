@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { OrderByPipe } from './pipes/order-by.pipe';
 import { ButacasComponent } from './butacas/butacas.component';
+import { EntradaComponent } from './entrada/entrada.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ButacasComponent } from './butacas/butacas.component';
     LoginComponent,
     FilterPipe,
     OrderByPipe,
-    ButacasComponent
+    ButacasComponent,
+    EntradaComponent
     
   ],
   imports: [
