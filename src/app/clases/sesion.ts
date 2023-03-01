@@ -1,5 +1,5 @@
 export interface Sesion{
-    id:Number;
+    id:String;
     pelicula_id:Number;
     sala:Number;
     hora_peli:String;

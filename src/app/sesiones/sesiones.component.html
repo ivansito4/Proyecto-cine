@@ -1,9 +1,9 @@
-
+<h1>Sesiones para la pelicula: {{pelicula.nombre}}</h1>
 <div class="contenedor">  
     <div class="book" *ngFor="let sesion of sesiones " [routerLink]="['Butacas',sesion.id]">
         <p>Sala 02</p>
         <div class="cover">
-            <p>{{sesion.hora_peli}}<br>{{sesion.fecha_peli |date}}}</p>
+            <p>{{sesion.hora_peli}}<br>{{sesion.fecha_peli }}</p>
         </div>
        </div>
 </div>  

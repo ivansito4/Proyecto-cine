@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Usuario } from '../clases/usuario';
 import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
@@ -18,22 +19,25 @@ export class RegistroComponent {
 
   constructor(public usuarioServicio: UsuariosService) {}
 
-  formulario() {
+  async formulario() {
+  
     if (this.password != this.password2) {
       alert('Las contraseñas tienen que ser iguales');
     } else {
-      const usuario = {
-        nombre: this.nombre,
-        apellidos: this.apellidos,
-        email: this.email,
-        login: this.login,
-        password: this.password,
-        telefono:this.telefono,
-        dni:this.dni
+      const usuario:Usuario = {
+        "id":"",
+        "nombre": this.nombre,
+        "apellidos": this.apellidos,
+        "email": this.email,
+        "login": this.login,
+        "password": this.password,
+        "telefono":this.telefono,
+        "dni":this.dni,
+        "roles":JSON.parse('["ROLE_USER"]'),
+        "foto":""
       };
-      this.usuarioServicio.login(usuario).subscribe((data) => {
-        console.log(data);
-      });
+      const resultado=await this.usuarioServicio.register(usuario);
+        alert("Usuario registrado correctamente");
     }
   }
 }

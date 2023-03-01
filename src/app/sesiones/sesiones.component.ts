@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Sesion } from '../clases/sesion';
+import { Pelicula } from '../clases/pelicula';
 import { GestionCineService } from '../services/gestionCine.service';
 
 @Component({
@@ -10,16 +11,35 @@ import { GestionCineService } from '../services/gestionCine.service';
 })
 export class SesionesComponent {
   sesiones:Sesion[]=[];
+  vacio:Sesion[]=[];
+  pelicula:Pelicula={
+    id:0,
+    nombre:"",
+    poster:"",
+    tipo:"",
+    duracion:"",
+    fecha_estreno: new Date()
+  };
+  
 
   constructor(private route: ActivatedRoute,private cineServicio:GestionCineService){ }
 
   ngOnInit(){
+    this.obtenerPelicula();
     this.obtenerSesiones();
+    
+  }
+
+  async obtenerPelicula(){
+    const id = Number(this.route.snapshot.paramMap.get('idPelicula'));
+    this.pelicula= await this.cineServicio.getPelicula(id);
   }
 
   async obtenerSesiones(){
     const id = Number(this.route.snapshot.paramMap.get('idPelicula'));
     this.sesiones=await this.cineServicio.getSesiones(id);
-    console.log(this.sesiones[0].sala);
+    if(this.sesiones==this.vacio){
+      alert("No hay sesiones para esta película");
+    }
   }
 }

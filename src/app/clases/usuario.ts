@@ -1,5 +1,5 @@
 export interface Usuario{
-    id:Number;
+    id:String;
     email:String;
     roles:JSON;
     password:String;

@@ -35,10 +35,10 @@ export class GestionCineService {
 
   async getSesiones(id:number):Promise<Sesion[]>{
     try{
-      const data= await lastValueFrom(this.http.get<Sesion[]>(this.apiRestUrl + "/sesion"));
+      const data= await lastValueFrom(this.http.get<Sesion[]>(this.apiRestUrl + "/sesion/"+id));
       return data;
     }catch{
-      alert("No se encuentra la sesión");
+      alert("No hay sesiones para esta película");
       return [];
     }
   }

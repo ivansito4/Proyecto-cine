@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,21 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  email:string="";
-  password:string="";
+  email: string = "";
+  password: string = "";
 
-  constructor(){}
+  constructor(public usuarioServicio: UsuariosService) { }
 
-  formulario(){
+  async formulario() {
     const usuario = {
       email: this.email,
-      password: this.password
+      password: this.password,
+    };
+    const resultado = await this.usuarioServicio.register(usuario);
+    if (resultado.status == "Ok") {
+      alert("Usuario registrado correctamente");
+    }else{
+      alert("????????");
     }
-    alert(this.email+" "+this.password);
   }
 }

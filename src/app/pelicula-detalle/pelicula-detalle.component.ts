@@ -10,27 +10,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./pelicula-detalle.component.css']
 })
 export class PeliculaDetalleComponent implements OnInit{
-  date: Date = new Date();    //preguntar al profe 
+  
   pelicula:Pelicula={
     id:0,
     nombre:"",
     poster:"",
     tipo:"",
     duracion:"",
-    fecha_estreno:this.date
+    fecha_estreno: new Date()
   };
+
   constructor(private route: ActivatedRoute,private cineServicio:GestionCineService){}
   ngOnInit() {
-    this.obtenerSesiones();
+    this.obtenerPelicula();
   }
 
-  async obtenerSesiones(){
+  async obtenerPelicula(){
     const id = Number(this.route.snapshot.paramMap.get('idPelicula'));
     this.pelicula= await this.cineServicio.getPelicula(id);
   }
 
-
-
-  //pelicula clickada?
   
 }
