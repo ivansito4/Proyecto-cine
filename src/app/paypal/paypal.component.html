@@ -1,0 +1,26 @@
+<a class="fancy" *ngIf="!showPaypalButtons" (click)="pay()">
+    <span class="top-key"></span>
+    <span class="text">Comprar entrada</span>
+    <span class="bottom-key-1"></span>
+    <span class="bottom-key-2"></span>
+  </a>
+
+ 
+ 
+<ngx-paypal *ngIf="showPaypalButtons" [config]="payPalConfig">
+</ngx-paypal>
+<button *ngIf="showPaypalButtons" (click)="back()">Volver atras</button>
+<div class="comprado" *ngIf="comprado">
+  <p>Entrada comprada con éxito</p>
+  <button (click)="descargarPDF()">Descargar PDF</button><br><br><br>
+  <p>Si quieres cancelar la entrada pulse aquí</p>
+  <button (click)="cancelarEntrada()">Cancelar entrada</button><br><br><br>
+  <p>Si quieres cambiar el precio, elige uno nuevo y en el local te devolveremos el dinero.</p>
+  <select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+    <option value=9.99>Entrada Normal (Default) 9.99</option>
+    <option value=6.99>Entrada Reducida 6.99</option>
+    <option value=15.99>Entrada VIP 15.99</option>
+  </select>
+  <button (click)="editarPrecio()">Editar precio</button>
+</div>
+

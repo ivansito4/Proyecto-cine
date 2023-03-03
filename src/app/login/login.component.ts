@@ -19,10 +19,6 @@ export class LoginComponent {
       password: this.password,
     };
     const resultado = await this.usuarioServicio.register(usuario);
-    if (resultado.status == "Ok") {
-      alert("Usuario registrado correctamente");
-    }else{
-      alert("????????");
-    }
+    alert("Usuario logeado correctamente");
   }
 }

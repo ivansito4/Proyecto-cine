@@ -25,6 +25,9 @@ import { OrderByPipe } from './pipes/order-by.pipe';
 import { ButacasComponent } from './butacas/butacas.component';
 import { EntradaComponent } from './entrada/entrada.component';
 
+import { PaypalComponent } from './paypal/paypal.component';
+import { NgxPayPalModule } from 'ngx-paypal';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +44,8 @@ import { EntradaComponent } from './entrada/entrada.component';
     FilterPipe,
     OrderByPipe,
     ButacasComponent,
-    EntradaComponent
-    
+    EntradaComponent,
+    PaypalComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { EntradaComponent } from './entrada/entrada.component';
     CarouselComponent,
     AppRoutingModule,
     NgbModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    NgxPayPalModule
   ],
   providers: [GestionCineService],
   bootstrap: [AppComponent]

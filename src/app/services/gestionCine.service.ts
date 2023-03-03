@@ -35,12 +35,17 @@ export class GestionCineService {
 
   async getSesiones(id:number):Promise<Sesion[]>{
     try{
-      const data= await lastValueFrom(this.http.get<Sesion[]>(this.apiRestUrl + "/sesion/"+id));
+      const data= await lastValueFrom(this.http.get<Sesion[]>(this.apiRestUrl + "/sesion/pelicula/"+id));
       return data;
     }catch{
       alert("No hay sesiones para esta película");
       return [];
     }
+  }
+
+  async getSesion(id:number):Promise<Sesion>{
+    const sesion= await lastValueFrom(this.http.get<Sesion>(this.apiRestUrl + "/sesion/"+id));
+    return sesion;
   }
   
   async getComidas():Promise<Comida[]>{
@@ -49,6 +54,32 @@ export class GestionCineService {
       return data;
     }catch{
       return [];
+    }
+  }
+
+
+  async insertarEntrada(entrada:any,idUsu:Number,idSes:String|undefined,idBut:Number|undefined): Promise<any> {
+    try{
+      const data= await lastValueFrom(this.http.post<any>(this.apiRestUrl+"/entrada/new/"+idUsu+"/"+idSes+"/"+idBut,entrada,this.httpOptions));
+      return data;
+    }
+    catch{
+      return {"status":"error"};
+    }
+  }
+
+   borrarEntrada(id:Number){
+      lastValueFrom(this.http.get<Sesion>(this.apiRestUrl + "/entrada/delete/"+id));
+  }
+
+  async editarEntrada(precio:any,id:Number){
+    try{
+      console.log(precio);
+      const data= await lastValueFrom(this.http.put<any>(this.apiRestUrl+"/entrada/edit/"+id,precio,this.httpOptions));
+      return data;
+    }
+    catch{
+      return {"status":"error"};
     }
   }
 }

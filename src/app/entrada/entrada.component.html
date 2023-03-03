@@ -1,6 +1,22 @@
-
 <div class="contenedor">
-    <div>CINETIX</div>
+    <table>
+        <tr >
+            <td colspan="2">Estas apunto de comprar una entrada para la película: </td>
+        </tr>
+        <tr >
+            <td colspan="2">{{pelicula.nombre}}</td>
+        </tr>
+        <tr>
+            <td>Sala: 02</td>
+            <td>Butaca: {{butaca}}</td>
+        </tr>
+        <tr>
+            <td>Hora: {{sesion.hora_peli}}</td>
+            <td>Día: {{sesion.fecha_peli}}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><app-paypal *ngIf="sesion.hora_peli!=''" [pelicula]="pelicula.nombre" [butaca]="butaca" [hora]="sesion.hora_peli" [dia]="sesion.fecha_peli" [sesion]="sesion.id"></app-paypal></td>
+        </tr>
+    </table>
     
-    <img src='http://localhost/proyecto-cine/public/img/entrada.png'>
 </div>
