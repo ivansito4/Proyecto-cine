@@ -1,17 +1,18 @@
-<div class="login-box">
+<div class="login-box needs-validation" novalidate>
  
     <form>
       <div class="user-box">
-        <input type="text" [(ngModel)]="email" name="email" >
+        <input type="text" name="email" [(ngModel)]="email">
         <label>Correo</label>
       </div>
       <div class="user-box">
-        <input type="password" [(ngModel)]="password" name="pasword" >
+        <input type="password" [(ngModel)]="contra" name="pasword" >
         <label>Contraseña</label>
       </div>
-      <a (click)="formulario()">
+      <a (click)="validar()">
              Iniciar Sesión
          <span></span>
       </a>
     </form>
   </div>
+  <div class="separador"></div>

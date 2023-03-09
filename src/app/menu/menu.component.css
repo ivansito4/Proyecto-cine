@@ -30,7 +30,13 @@ li{
     margin-left: 40px;
 }
 
-
-
-
+input,input:focus,input:hover{
+    color: black;
+    border-radius: 90px;
+    margin-top: 5px;
+    text-align: center;
+}
+.segundo,.segundo:focus,.segundo:hover{
+    color: black;
+}
 

@@ -1,1 +1,18 @@
-<p>¡¡EN PRODUCCION!!</p>
+<div class="login-box">
+ 
+    <form>
+      <div class="user-box">
+        <input type="text" [(ngModel)]="email" name="email" >
+        <label>Correo</label>
+      </div>
+      <div class="user-box">
+        <input type="comentario" [(ngModel)]="comentario" name="comentario" >
+        <label>Comentario</label>
+      </div>
+      <a (click)="formulario()">
+             Enviar comentario
+         <span></span>
+      </a>
+    </form>
+  </div>
+  <div class="separador"></div>

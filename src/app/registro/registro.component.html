@@ -1,5 +1,5 @@
 <div class="login-box">
-    <form>
+    <form errorTailor>
       <div class="user-box">
         <input type="text"  [(ngModel)]="nombre" name="nombre" >
         <label>Nombre</label>
@@ -9,7 +9,7 @@
         <label>Apellidos</label>
       </div>
       <div class="user-box">
-        <input type="text"  [(ngModel)]="email" name="email" >
+        <input type="email" name="email" [(ngModel)]="email">
         <label>Email</label>
       </div>
       <div class="user-box">
@@ -17,25 +17,21 @@
         <label>Nombre de usuario</label>
       </div>
       <div class="user-box">
-        <input type="password"  [(ngModel)]="password" name="password" >
+        <input type="password"  [(ngModel)]="contra" name="password" >
         <label>Contraseña</label>
       </div>
       <div class="user-box">
-        <input type="password"  [(ngModel)]="password2" name="password2" >
+        <input type="password"  [(ngModel)]="contra2" name="password2" >
         <label>Repetir contraseña</label>
       </div>
       <div class="user-box">
         <input type="number"  [(ngModel)]="telefono" name="telefono" >
         <label>Teléfono</label>
       </div>
-      <div class="user-box">
-        <input type="text"  [(ngModel)]="dni" name="dni" >
-        <label>DNI</label>
-      </div>
-      <a (click)="formulario()">
+      <a (click)="validar()">
              Registrarme
          <span></span>
       </a>
     </form>
   </div>
-
+<div class="separador"></div>

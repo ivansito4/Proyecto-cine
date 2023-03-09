@@ -146,13 +146,13 @@ export class PaypalComponent implements OnInit {
     pdf.text("Butaca:",20,100);
     pdf.text(texto2,60,100);
 
-    pdf.text("Sesion:",20,120);
+    pdf.text("Sesión:",20,120);
     pdf.text(texto3,60,120);
 
     pdf.text("Hora:",20,140);
     pdf.text(texto4,60,140);
 
-    pdf.text("Dia:",20,160);
+    pdf.text("Día:",20,160);
     pdf.text(texto5,60,160);
 
     pdf.text("Precio:",20,180);

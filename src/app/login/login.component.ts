@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
@@ -7,18 +7,37 @@ import { UsuariosService } from '../services/usuarios.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  @Input()
+  email!: string;
+  @Input()
+  contra!: string;
 
-  email: string = "";
-  password: string = "";
+  constructor(public usuarioServicio: UsuariosService) { 
+    
+  }
 
-  constructor(public usuarioServicio: UsuariosService) { }
+  validar(){
+    let todoBien=true;
+    if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(this.email)){
+      alert("La dirección de email es incorrecta.");
+      todoBien=false;
+    } 
+    console.log(this.contra);
+    if(this.contra==undefined || !/^[a-zA-Z0-9\s]+$/.test(this.contra)){
+      alert("La contraseña es incorrecta");
+      todoBien=false;
+    }
+    
+    if(todoBien){
+      this.formulario();
+    }
+  }
 
   async formulario() {
     const usuario = {
       email: this.email,
-      password: this.password,
+      password: this.contra,
     };
-    const resultado = await this.usuarioServicio.register(usuario);
     alert("Usuario logeado correctamente");
   }
 }

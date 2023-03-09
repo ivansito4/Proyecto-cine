@@ -1,0 +1,13 @@
+li{
+    color: orange;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+ul li{
+    margin-left: 5%;
+    
+}
+a{
+    color: white;
+    text-decoration: dashed;
+}

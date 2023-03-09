@@ -27,6 +27,8 @@ import { EntradaComponent } from './entrada/entrada.component';
 
 import { PaypalComponent } from './paypal/paypal.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { MapaWebComponent } from './mapa-web/mapa-web.component';
+import { AccesibilidadComponent } from './accesibilidad/accesibilidad.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { NgxPayPalModule } from 'ngx-paypal';
     OrderByPipe,
     ButacasComponent,
     EntradaComponent,
-    PaypalComponent
+    PaypalComponent,
+    MapaWebComponent,
+    AccesibilidadComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     AppRoutingModule,
     NgbModule,
     NgbDropdownModule,
-    NgxPayPalModule
+    NgxPayPalModule,
+   
   ],
   providers: [GestionCineService],
   bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
 .comprado{
     position:relative;
-    z-index: 100000;
-    top: -500px;
-    padding: 180px;
+    top: -710px;
+    padding: 100px;
+    z-index: 100;
     background-color: #6b6060;
     margin-bottom: -1000px;
 }
@@ -44,6 +44,9 @@
     transform: translateY(-50%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
+   }
+   .ajuste{
+    margin-bottom: 280px;
    }
    
    .fancy .text {

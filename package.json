@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
+    "@ngneat/error-tailor": "^1.3.1",
     "@popperjs/core": "^2.11.6",
     "angular-in-memory-web-api": "^0.15.0",
     "bootstrap": "^5.2.3",
